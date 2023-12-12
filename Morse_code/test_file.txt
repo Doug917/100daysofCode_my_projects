@@ -1,0 +1,6 @@
+This is a test file
+to check if the Morse code converter
+works properly.  Punctuation marks are
+maintained as uncoded.  So, in the output file,
+you should see periods, commas, and exclamation
+points as in this original text!
