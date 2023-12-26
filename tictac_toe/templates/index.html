@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="../static/stylesheet.css">
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item">{{symbols['1']}}</div>
+            <div class="grid-item">{{symbols['2']}}</div>
+            <div class="grid-item">{{symbols['3']}}</div>  
+            <div class="grid-item">{{symbols['4']}}</div>
+            <div class="grid-item">{{symbols['5']}}</div>
+            <div class="grid-item">{{symbols['6']}}</div>  
+            <div class="grid-item">{{symbols['7']}}</div>
+            <div class="grid-item">{{symbols['8']}}</div>
+            <div class="grid-item">{{symbols['9']}}</div>  
+          </div>
+
+          <form method="post" action='/'>
+            <label for="Xpos">X position:</label><br>
+            <input type="text" id="X" name="X"><br>
+            <label for="Opos">O position:</label><br>
+            <input type="text" id="O" name="O">
+            <input type="submit" name='submit' value="Submit">
+            <input type="submit" name='submit' value="Reset">
+          </form>
+
+          {% if symbols['1']==symbols['2']==symbols['3']=='X' %}
+            <h3>Player X Wins!!</h3>
+          {% elif symbols['4']==symbols['5']==symbols['6']=='X' %}
+            <h3>Player X Wins!!</h3>
+          {% elif symbols['7']==symbols['8']==symbols['9']=='X' %}
+            <h3>Player X Wins!!</h3>
+          {% elif symbols['1']==symbols['4']==symbols['7']=='X' %}
+            <h3>Player X Wins!!</h3>
+          {% elif symbols['2']==symbols['5']==symbols['8']=='X' %}
+            <h3>Player X Wins!!</h3>
+          {% elif symbols['3']==symbols['6']==symbols['9']=='X' %}
+            <h3>Player X Wins!!</h3>
+          {% elif symbols['1']==symbols['5']==symbols['9']=='X' %}
+            <h3>Player X Wins!!</h3>
+          {% elif symbols['7']==symbols['5']==symbols['3']=='X' %}
+            <h3>Player X Wins!!</h3>
+          {% endif %}
+        
+          {% if symbols['1']==symbols['2']==symbols['3']=='O' %}
+            <h3>Player O Wins!!</h3>
+          {% elif symbols['4']==symbols['5']==symbols['6']=='O' %}
+            <h3>Player O Wins!!</h3>
+          {% elif symbols['7']==symbols['8']==symbols['9']=='O' %}
+            <h3>Player O Wins!!</h3>
+          {% elif symbols['1']==symbols['4']==symbols['7']=='O' %}
+            <h3>Player O Wins!!</h3>
+          {% elif symbols['2']==symbols['5']==symbols['8']=='O' %}
+            <h3>Player O Wins!!</h3>
+          {% elif symbols['3']==symbols['6']==symbols['9']=='O' %}
+            <h3>Player O Wins!!</h3>
+          {% elif symbols['1']==symbols['5']==symbols['9']=='O' %}
+            <h3>Player O Wins!!</h3>
+          {% elif symbols['7']==symbols['5']==symbols['3']=='O' %}
+            <h3>Player O Wins!!</h3>
+          {% endif %}
+    </body>
+</html>
