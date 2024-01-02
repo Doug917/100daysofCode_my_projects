@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+       <h1>Test Out Your Typing Speed</h1>
+
+       <div class="box">
+       <h3 id="instructions">After pressing the 'Start' button
+        you will be shown a paragraph to retype in the box given below.
+        When you are ready, press the 'Stop' button.
+       </h3>
+       </div>
+       <div class="box">
+        <form method="post" action="/">
+            <button type="submit" id="Start_Button" name="button" value="Start_Button">Start</button>
+       </form>
+       </div>
+       {% if test_text_visibility==True %}
+       <div class="box">
+        <h3>{{test_text}}</h3>
+       </div>
+       {% endif %}
+       <div class="box">
+       <form method="post" action="/">
+            <textarea id="user_type_box" name="users_text" rows="10" cols="100"></textarea>
+            <button type="submit" id="Stop_Button" name="button" value="Stop_Button">Stop</button>
+       </form>
+       </div>
+
+       <h3>Typing Speed: {{speed}} WPM</h3>
+       <h3>Accuracy: {{accuracy}} %</h3>
+    
+</html>
